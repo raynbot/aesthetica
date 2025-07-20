@@ -43,3 +43,23 @@ rest.put(
 
 console.log("Token present:", process.env.TOKEN ? "✅" : "❌");
 client.login(process.env.TOKEN);
+
+// At the end of your index.js
+import express from 'express';
+const app = express();
+
+app.get('/', (_, res) => {
+  res.send(`
+    <html>
+      <head><title>Aesthetica Status</title></head>
+      <body style="font-family: sans-serif; text-align: center; margin-top: 10%;">
+        <h1 style="color: ${client?.user?.bot ? 'green' : 'red'};">
+          Aesthetica is ${client?.user?.bot ? 'Online 🟢' : 'Offline 🔴'}
+        </h1>
+      </body>
+    </html>
+  `);
+});
+
+app.listen(process.env.PORT || 3000);
+
