@@ -33,7 +33,11 @@ const commands = [
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
-rest.put(Routes.applicationCommands(process.env.CLIENT_ID), { body: commands })
+rest.put(
+  Routes.applicationGuildCommands(process.env.CLIENT_ID, '1271272715562516551'),
+  { body: commands }
+)
+
   .then(() => console.log('Slash command registered.'))
   .catch(console.error);
 
