@@ -37,4 +37,5 @@ rest.put(Routes.applicationCommands(process.env.CLIENT_ID), { body: commands })
   .then(() => console.log('Slash command registered.'))
   .catch(console.error);
 
+console.log("Token present:", process.env.TOKEN ? "✅" : "❌");
 client.login(process.env.TOKEN);
