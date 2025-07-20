@@ -1,0 +1,16 @@
+{
+  "name": "aesthetica",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "rayn",
+  "license": "MIT",
+  "description": "a simple bot for Discord to check your vibe.",
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "dotenv": "^16.6.1"
+  }
+}
